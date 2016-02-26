@@ -1,7 +1,7 @@
 <?php
 
 require_once '../inc/connection.php';
-require_once '../inc/classes/connection.php';
+require_once '../inc/classes/users.php';
 
 $module = filter_input(INPUT_GET, 'module');
 $action = filter_input(INPUT_GET, 'action');
