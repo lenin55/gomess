@@ -1,0 +1,17 @@
+Drag and Drop
+Exclusive drag and drop option, where you can build an attractive website using this web page builder without any coding skills required.
+
+No No No
+Just gomessup!!!World's first place to build your website for absolute free and ad free page builder with huge updates and strong support.
+
+Design quality
+Each and every elements are well coded and tested twice. We are working here to provide more codes of design elements with the best quality.
+
+pixel perfect code
+The codes will be perfectly alligned for what you have designed by drag and drop function and also works well with the css and js files.
+
+Feature Availability
+Special feature of this responsive page builder is the style and content editor where you can edit the styles, colors, fonts and icons as well. 
+
+Fast loading
+We provide CDN support also for fast loading site where all the aditional files such as img, css, js will be labeled from the CDN link.
