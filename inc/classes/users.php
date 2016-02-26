@@ -35,6 +35,7 @@ class users {
             if (mysql_affected_rows()) {
                 $res["error"] = false;
                 $res["message"] = "Register successfully";
+                $res["data"] = users::getUserByEmail($email);
             } else {
                 $res["message"] = "Unable to register";
             }
