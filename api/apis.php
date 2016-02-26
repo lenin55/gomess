@@ -12,16 +12,38 @@ switch ($module) {
             case 'login':
                 $res = [];
                 $res["error"] = true;
-                $res["message"]="Sorry! some error occurs while login";
+                $res["message"] = "Sorry! some error occurs while login";
                 $params = [];
                 $params["email"] = filter_input(INPUT_GET, 'action');
                 $params["password"] = filter_input(INPUT_GET, 'action');
-                $login = new users();
-                $ressult = $login->login($params);
+                $user = new users();
+                $login = $user->login($params);
+                if ($login["error"] == false) {
+                    $res["error"] = false;
+                    $res["message"] = $login["message"];
+                    $res["data"] = $login["data"];
+                } else {
+                    $res["message"] = $login["message"];
+                }
                 response_json($res);
                 break;
             case 'register':
-                
+                $res = [];
+                $res["error"] = true;
+                $res["message"] = "Sorry! some error occurs while register";
+                $params = [];
+                $params["name"] = filter_input(INPUT_GET, 'name');
+                $params["email"] = filter_input(INPUT_GET, 'action');
+                $params["password"] = filter_input(INPUT_GET, 'action');
+                $user = new users();
+                $register = $user->register($params);
+                if ($register["error"] == false) {
+                    $res["error"] = false;
+                    $res["message"] = $register["message"];
+                    $res["data"] = $register["data"];
+                } else {
+                    $res["message"] = $register["message"];
+                }
                 response_json($res);
                 break;
         }
@@ -36,5 +58,3 @@ function response_json($res) {
 
     echo json_encode($res);
 }
-
-
