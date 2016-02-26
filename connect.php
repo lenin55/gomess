@@ -1,3 +1,4 @@
 <?php
-$sql=mysql_connect("localhost","root","")
+
+require_once '../inc/connection.php';
 ?>
