@@ -99,6 +99,10 @@ body {
 .submit{
 	float:left;
 }
+.submitup {
+    float: left;
+    margin-top: 54px;
+}
 .login-bottom ul{
 	padding:0;
 	float:right;
