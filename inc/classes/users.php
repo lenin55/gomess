@@ -1,6 +1,5 @@
 <?php
 
-
 class users {
 
     public function login($params) {
@@ -29,7 +28,7 @@ class users {
         $password = trim($params["password"]);
         $exist = users::checkUserExist($email);
         if (!$exist) {
-            $sql = "INSERT INTO `users` SET `name` = " . $name . " `email` = " . $email . " `password` = " . $password;
+            $sql = "INSERT INTO `users` (`name`, `email`, `password`) VALUES ('" . $name . "', '" . $email . "', '" . $password . "')";
             mysql_query($sql);
             if (mysql_affected_rows()) {
                 $res["error"] = false;
