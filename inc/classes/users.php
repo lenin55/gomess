@@ -43,7 +43,7 @@ class users {
 
     static function checkUserExist($email) {
         $res = false;
-        $sql = "SELECT * FROM `users` WHERE `email` = " . $email;
+        $sql = "SELECT * FROM `users` WHERE `email` = '" . $email . "'";
         $result = mysql_query($sql);
         if (mysql_num_rows($result) > 0) {
             $res = true;
@@ -52,7 +52,7 @@ class users {
     }
 
     static function getUserByEmail($email) {
-        $sql = "SELECT * FROM `users` WHERE `email` = " . $email;
+        $sql = "SELECT * FROM `users` WHERE `email` = '" . $email . "'";
         $result = mysql_query($sql);
         $user = mysql_fetch_assoc($result);
         return $user;
